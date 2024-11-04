@@ -79,3 +79,31 @@ function basicCalculator(num1, num2, operation) {
     }
 }
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+function calculateGrade(grade) {
+    if (grade < 100 && grade >= 90){
+        return 'A'
+    }else if (grade < 90 && grade >= 80){
+        return 'B'
+    }else if (grade < 80 && grade >= 70){
+        return 'C'
+    }else if (grade < 70 && grade >= 60){
+        return 'D'
+    }else if (grade < 60 && grade >= 0){
+        return 'F'
+    }else {
+        return 'The grade must be from 0 to 100'
+    }
+}
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+function createUsername(firstName, lastName) {
+    let count = firstName.length + lastName.length
+    return `${firstName.slice(0, 3)}${lastName.slice(0, 3)}${count}`
+}
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+function numArgs(num1, num2, num3, num4) {
+    return arguments.length
+}
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
